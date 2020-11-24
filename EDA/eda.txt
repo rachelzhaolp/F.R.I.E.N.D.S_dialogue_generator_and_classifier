@@ -1,0 +1,31 @@
+Class Balance:
+
+label
+chandler    0.169529
+joey        0.164072
+monica      0.165182
+phoebe      0.148362
+rachel      0.175719
+ross        0.177136
+Name: line, dtype: float64
+------------------------------------------------
+Quantile of line length:
+
+0.05     3.0
+0.10     4.0
+0.25     6.0
+0.50    10.0
+0.75    17.0
+0.90    28.0
+0.95    36.0
+Name: linelen, dtype: float64
+------------------------------------------------
+
+Min length: 3
+
+Median length: 13.790214746391364
+
+Mean length: 10.0
+
+Max length: 248
+

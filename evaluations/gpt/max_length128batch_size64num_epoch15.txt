@@ -1,0 +1,24 @@
+Test Loss =  2.54361629486084
+Test F1 Score =  0.2634891319667004
+Test Accuracy Score =  0.26173285198555957
+Test Classification Report = 
+              precision    recall  f1-score   support
+
+    chandler       0.35      0.28      0.31       133
+        joey       0.25      0.20      0.23        88
+      monica       0.33      0.31      0.32       107
+      phoebe       0.24      0.20      0.22        84
+      rachel       0.18      0.37      0.24        60
+        ross       0.22      0.22      0.22        82
+
+    accuracy                           0.26       554
+   macro avg       0.26      0.26      0.26       554
+weighted avg       0.28      0.26      0.26       554
+
+          chandler  joey  monica  phoebe  rachel  ross
+chandler        37    19      19       8      22    28
+joey            14    18      11      10      18    17
+monica          19     9      33      15      24     7
+phoebe          11     7      17      17      24     8
+rachel           6     8       9      10      22     5
+ross            18    11      11      12      12    18
