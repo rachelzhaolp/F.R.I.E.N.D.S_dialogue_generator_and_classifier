@@ -1,4 +1,4 @@
-#F.R.I.E.N.D.S Dialogue Generation And Classification with GPT-2 and BERT
+# F.R.I.E.N.D.S Dialogue Generation And Classification with GPT-2 and BERT
 
 <!-- toc -->
 #### Developer: Luping(Rachel) Zhao
@@ -121,6 +121,7 @@ Sample Output:
 ![](deliverables/reports/sample.png)
 
 **Confusion Matrix of the Generated text**
+
 ![](deliverables/reports/cm_generated.png)
 
 
