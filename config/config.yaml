@@ -1,0 +1,89 @@
+model:
+  name: F.R.I.E.N.D.S dialogue generation and classification
+  author: Luping(Rachel) Zhao
+  version: AA1
+  description: Neutual language project. Fine-tune GPT-2 with F.R.I.E..N.D.S dialogue and generate
+  tags:
+    - recommandation system
+  dependencies: requirements.txt
+
+clean:
+  labels: # analyze dialogues for which characters
+    - chandler
+    - joey
+    - monica
+    - phoebe
+    - rachel
+    - ross
+  min_len:
+    3
+  ignore_non_alphabetic:
+    True
+
+eda:
+  quantile: # quantile of line length
+    - .05
+    - .10
+    - .25
+    - .50
+    - .75
+    - .90
+    - .95
+  top_n_words:
+    tfidfParams:
+      ngram_range: !!python/tuple [1,1]
+      max_df: 0.5
+      min_df: 1
+    top_n: 5
+  groups:
+    - ['label']
+    - ['season','label']
+
+
+aug:
+  contextual_max: 4
+  ramdom_max: 3
+
+bert:
+  training_test_split:
+    random_state: 428
+    test_size: 0.2
+  max_length: 128
+  tokenize:
+    truncation: True
+    add_special_tokens: True
+    return_attention_mask: True
+    pad_to_max_length: True
+    return_tensors: pt
+  batch_size: 64
+  optimizer:
+    lr: .00001
+    eps: .00000001
+  num_epoch: 15
+  seed: 428
+
+gpt2:
+  model_name: 124M
+  steps: 6000
+  batch_size: 1
+  learning_rate: 0.0001
+  restore_from: fresh
+  print_every: 10
+  sample_every: 1000
+  sample_length: 128
+  sample_num: 1
+  save_every: 500
+
+generate:
+  num: 100
+  random_seed: 428
+  generator:
+    length: 128
+    temperature: 0.7
+    seed: 4288
+    return_as_list: True
+
+
+
+
+
