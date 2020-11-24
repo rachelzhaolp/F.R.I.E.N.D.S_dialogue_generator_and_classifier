@@ -9,3 +9,5 @@ __pycache__/
 config/local
 !.gitkeep
 .db
+
+models/max_length128batch_size64num_epoch15/
