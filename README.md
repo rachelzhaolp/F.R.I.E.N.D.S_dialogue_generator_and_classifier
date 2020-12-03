@@ -76,7 +76,7 @@ docker run --mount type=bind,source="$(pwd)",target=/app/ msia490 run.py <clean_
 You can build a Dockerfile for this as well
 ```bash
 pip install -r requirements.txt 
-python run api.py
+python api.py
 ```
 ![Demo of the web app](deliverables/demo.gif)
 
